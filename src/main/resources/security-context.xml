@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/mvc 
+    http://www.springframework.org/schema/mvc/spring-mvc.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/data/jpa
+    http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+    http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security.xsd">
+
+           
+           
+<security:http auto-config="true" use-expressions="true">
+		<security:intercept-url pattern="/reviewer/**" access="hasRole('ROLE_USER')" requires-channel="any" />
+		<security:intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')" requires-channel="any"/>			
+		<!-- security:intercept-url pattern="/admin/**" access="isAuthenticated()" requires-channel="any"/-->	
+		<security:form-login login-page="/home"
+			authentication-failure-url="/403"
+			authentication-success-handler-ref="successHandler"
+			 />
+		<security:logout logout-url="/logout" logout-success-url="/home" />
+
+		
+	</security:http>
+	<bean id="successHandler"
+		class="com.reviewthedoctors.security.WebAuthenticationSuccessHandler">
+	</bean>
+	
+	
+	<security:authentication-manager alias="authenticationManager">
+		<security:authentication-provider user-service-ref="userService">
+		</security:authentication-provider>
+	</security:authentication-manager>
+	
+	<security:jdbc-user-service id="userService"  data-source-ref="dataSource"
+		  users-by-username-query=
+		    "select email,password, true from user where email=?"
+		  authorities-by-username-query=
+		    "select email, authority from user where email =?  " />
+</beans>	
+           

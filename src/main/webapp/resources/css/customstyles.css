@@ -1,0 +1,32 @@
+@CHARSET "ISO-8859-1";
+
+.error-msg {
+	width: 500px;
+	height: 30px;
+	background-color: #FDE9E2;
+	border: 1px solid #D57575;
+	color: #D57575;
+	margin:50px;
+	padding:10px;
+
+}
+
+.success-msg {
+	width: 500px;
+	height: 30px;
+	background-color: #DFF2BF;
+	border: 1px solid #62AB53;
+	color: #62AB53;
+	margin:50px;
+	padding:10px;
+}
+
+.warning-msg{
+	width: 500px;
+	height: 30px;
+	background-color: #FCFCA7;
+	border: 1px solid ;
+	color: #E3B334;
+	margin:50px 50px 50px 440px;
+	padding:10px;
+}
