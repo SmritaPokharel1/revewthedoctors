@@ -1,4 +1,4 @@
-##revewthedoctors
+#revewthedoctors
 Review the doctors is an application that helps people find good doctors. Not just this but it also helps in providing a platform for people to rate and review doctors. There are many technologies that this project uses .Firstly it is written in Java EE and Spring framework — Spring MVC , Spring Data Jpa, Spring security. Secondly it uses MYSQL as its underlying database. Thirdly it uses gradle for dependency management . Lastly it uses git for version control.
 
 #Application Setup  for tomcat
@@ -18,8 +18,38 @@ Review the doctors is an application that helps people find good doctors. Not ju
 The class com.reviewthedoctors.initialization.Initializor.java is used to populate values in database. 
 Following are the data that get populated in the database when the application starts:
 
+##Country table
+A country named Nepal is added.
+
+##Zone table
+A Zone named Bagmati is added.
+
+##District table
+A District named Kathmandu is added.
+
+##City table
+A city named Kathmandu is added.
+
+##Speciality table
+Speciality name Pulmonologist with chest as speciality category is added.
+
+##Hospital table
+Hospital named 'Grande International Hospital' is added.
+
+##User
+One user and one admin is added.
+Admin: admin with username 'admin@gmail.com' and password 'test' having authority ADMIN_ROLE is added. 
+User: User with username 'srija.pokharel@gmail.com' and password 'test' having authority USER_ROLE is added.
+
+##Doctor Table
+A Doctor with following details is added.
+FirstName: Arjun
+MiddleName: Kumar
+LastName: Karki
+SpecialityName:Pulmonologist
+Hospital:Grande International Hospital.
 
 #User Manual
 
-Chekc out the project manual from
+Chekc out the user manual from
 https://medium.com/@Smrita/web-application-walk-through-of-review-the-doctors-a2a4966fed09#.ws0wfj1uc
