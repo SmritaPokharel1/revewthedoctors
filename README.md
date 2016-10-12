@@ -1,4 +1,5 @@
 #revewthedoctors
+Review the doctors is an application that helps people find good doctors. Not just this but it also helps in providing a platform for people to rate and review doctors. There are many technologies that this project uses .Firstly it is written in Java EE and Spring framework — Spring MVC , Spring Data Jpa, Spring security. Secondly it uses MYSQL as its underlying database. Thirdly it uses gradle for dependency management . Lastly it uses git for version control.
 
 #Application Setup  for tomcat
 
