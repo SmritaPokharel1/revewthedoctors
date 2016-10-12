@@ -10,6 +10,6 @@
 
 4.Create a database named revewthedoctors in mysql.
 
-5.deploy the revewthedoctors.war war file which is located at <projectroot>/build/libs/ to tomcat.
+5.deploy the revewthedoctors.war war file which is located at projectroot_folder/build/libs/ to tomcat.
 
 
