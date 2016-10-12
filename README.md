@@ -44,11 +44,11 @@ User: User with username 'srija.pokharel@gmail.com' and password 'test' having a
 ##Doctor Table
 A Doctor with following details is added.
 
-###FirstName: Arjun
-###MiddleName: Kumar
-###LastName: Karki
-###SpecialityName:Pulmonologist
-###Hospital:Grande International Hospital.
+####FirstName: Arjun
+####MiddleName: Kumar
+####LastName: Karki
+####SpecialityName:Pulmonologist
+####Hospital:Grande International Hospital.
 
 #User Manual
 
