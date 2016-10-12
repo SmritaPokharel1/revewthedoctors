@@ -38,8 +38,17 @@ Hospital named 'Grande International Hospital' is added.
 
 ##User
 One user and one admin is added.
-Admin: admin with username 'admin@gmail.com' and password 'test' having authority ADMIN_ROLE is added. 
-User: User with username 'srija.pokharel@gmail.com' and password 'test' having authority USER_ROLE is added.
+###Admin:
+####Name: admin admin admin 
+####Email:'admin@gmail.com'
+####Password 'test' 
+####authority ADMIN_ROLE
+
+###User
+####Name: Srija Pokhrel
+####Email:'srijapokharel@gmail.com'
+####Password 'test' 
+####authority User_ROLE 
 
 ##Doctor Table
 A Doctor with following details is added.
