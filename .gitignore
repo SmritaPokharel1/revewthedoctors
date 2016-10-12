@@ -1,0 +1,19 @@
+gradle-app.setting
+
+.gradletasknamecache
+
+#eclipse 
+.classpath
+.project
+.settings
+
+#java
+/bin/*
+.gradle
+/build/*
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
