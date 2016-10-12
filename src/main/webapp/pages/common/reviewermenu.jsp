@@ -9,7 +9,7 @@
 	</div>
 
 	<div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-		<a id="search-anchor" href="search" class="mdl-layout__tab">Search</a> 
+		<a id="search-anchor" href="${pageContext.request.contextPath}/reviewer/search" class="mdl-layout__tab">Search</a> 
 		<a id="review-feed-anchor" href="${pageContext.request.contextPath}/reviewer/reviewfeed" class="mdl-layout__tab">Review Feed</a>
 		<a id="make-review-anchor" href="${pageContext.request.contextPath}/reviewer/makeareview" class="mdl-layout__tab">Make a review</a>
 		
