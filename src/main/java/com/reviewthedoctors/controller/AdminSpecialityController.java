@@ -17,6 +17,13 @@ import com.reviewthedoctors.api.ISpecialityApi;
 import com.reviewthedoctors.model.dto.SpecialityDto;
 import com.reviewthedoctors.util.StringConstants;
 
+/**
+ * The <code>AdminSpecialtyrController</code> has methods to add and list specialty.
+ * The methods in this controller can only be accessed by users having ROLE_ADMIN authority.
+ * 
+ * @author SmritaPokharel
+ *
+ */
 @Controller
 @RequestMapping(value="/admin")
 public class AdminSpecialityController {

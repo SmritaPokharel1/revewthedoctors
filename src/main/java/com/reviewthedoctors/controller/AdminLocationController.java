@@ -27,6 +27,11 @@ import com.reviewthedoctors.model.dto.DistrictDto;
 import com.reviewthedoctors.model.dto.ZoneDto;
 import com.reviewthedoctors.util.StringConstants;
 
+/**
+ * The class <code>AdminLocationController</code> is a <code>SpringController</code> that has methods to add and list country, zone, district and city.
+ * @author SmritaPokharel
+ *
+ */
 @Controller
 @RequestMapping(value="/admin")
 public class AdminLocationController {
@@ -44,6 +49,13 @@ public class AdminLocationController {
 	private ICityApi cityApi;
 	
 
+	/**
+	 * Sends countryDto to the API layer.
+	 * @param country
+	 * @param redirectAttributes
+	 * @return
+	 * @see RedirectAttributes
+	 */
 	@RequestMapping(value="countries",method=RequestMethod.POST)
 	public String addCountry(@ModelAttribute("country") CountryDto country,RedirectAttributes redirectAttributes){
 		
@@ -57,6 +69,18 @@ public class AdminLocationController {
 		return "redirect:country";
 	}
 	
+	/**
+	 * 
+	 * Returns a list of doctors that are in the database
+	 * 
+	 * @param modelMap
+	 * @param listType
+	 * @return
+	 * @see RedirectAttributes
+	 * @see StringConstants
+	 * @see ListType
+	 */
+	 
 	@ResponseBody
 	@RequestMapping(value="countries",method=RequestMethod.GET)
 	public Map<String,List<CountryDto>> getCountryList(ModelMap modelMap,@RequestHeader("List_Type") String listType){
@@ -67,6 +91,11 @@ public class AdminLocationController {
 		return countryListMap;
 	}
 	
+	/**
+	 * Deletes a country that has an id <code>countryId</code>
+	 * @param countryId
+	 * @return
+	 */
 	@ResponseBody
 	@RequestMapping(value="countries", method=RequestMethod.DELETE)
 	public String deleteCountry(@RequestBody Long countryId){

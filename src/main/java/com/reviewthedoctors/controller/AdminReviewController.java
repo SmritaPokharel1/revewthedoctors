@@ -24,12 +24,20 @@ import com.reviewthedoctors.model.dto.UserDto;
 import com.reviewthedoctors.util.SessionUtil;
 import com.reviewthedoctors.util.StringConstants;
 
+/**
+ * The <code>AdminReviewController</code> has methods to add and list review.
+ * The methods in this controller can only be accessed by users having ROLE_ADMIN authority.
+ * 
+ * @author SmritaPokharel
+ *
+ */
 @Controller
 @RequestMapping(value="/admin")
 public class AdminReviewController {
 
 	@Autowired
 	private IReviewApi reviewApi;
+
 
 	@RequestMapping(value = "reviews", method = RequestMethod.POST)
 	public String addReview(@ModelAttribute("review") ReviewDto review,RedirectAttributes redirectAttributes) {
@@ -52,6 +60,17 @@ public class AdminReviewController {
 		}
 	}
 
+	/**
+	 * Returns either one review or a list of reviews. The entire behaviour of this method is determined by listType parameter.
+	 * 
+	 * @param listType
+	 * @param redirectAttributes
+	 * @return
+	 * @see RedirectAttributes
+	 * @see StringConstants
+	 * @see ListType
+	 */
+	
 	@ResponseBody
 	@RequestMapping(value = "reviews", method = RequestMethod.GET)
 	public Map<String, List<ReviewDto>> getReviewList(HttpServletRequest request,@RequestHeader("List_Type") String listType) {
@@ -68,6 +87,12 @@ public class AdminReviewController {
 		return reviewListMap;
 	}
 	
+	/**
+	 * Returns details of an individual review based on the <code>reviewId</code> as sent in the request.
+	 * @param request
+	 * @return
+	 * @see HttpServletRequest
+	 */
 	@RequestMapping(value="individualreview",method=RequestMethod.GET)
 	public ModelAndView getIndividualReviewPage(HttpServletRequest request){
 		String reviewId = request.getParameter("reviewId");

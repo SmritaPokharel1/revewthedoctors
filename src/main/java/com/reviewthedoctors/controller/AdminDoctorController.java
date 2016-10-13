@@ -36,7 +36,7 @@ public class AdminDoctorController {
 	private IDoctorApi doctorApi;
 	
 	/**
-	 * Persists doctorDto sent from presentation layer to database.It adds update message to redirect attributes.
+	 * Sends doctorDto sent from presentation layer to Api layer .It adds update message to redirect attributes.
 	 * 
 	 * @param doctor the entity to be persisted in the database
 	 * @param redirectAttributes

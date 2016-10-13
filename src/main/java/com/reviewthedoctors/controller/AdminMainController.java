@@ -8,6 +8,10 @@ import org.springframework.web.servlet.ModelAndView;
 import com.reviewthedoctors.util.SessionUtil;
 import com.reviewthedoctors.util.StringConstants;
 
+/**
+ * The class <code>AdminMainController</code> is a <code>SpringController</code> that has methods to display different forms to add or list entities of the application. 
+ *
+ */
 @Controller
 @RequestMapping(value = "admin")
 public class AdminMainController {
@@ -18,6 +22,11 @@ public class AdminMainController {
 		return new ModelAndView("module/document/document", StringConstants.PAGE_TITLE, "Document");
 	}
 
+	/**
+	 * Returns <code>ModelAndView</code> of the form to either create or list hospital if the request is sent by an authenticated user.In case the user is not authenticated 404 page is returned.
+	 * @return <code>ModelAndView</code>
+	 * @see ModelAndView
+	 */
 	@RequestMapping(value = "/hospital", method = RequestMethod.GET)
 	public ModelAndView getHospitalPage() {
 		if (SessionUtil.getCurrentUser().getAuthority().equalsIgnoreCase(StringConstants.AUTHORITY_ROLE_ADMIN)) {
@@ -27,6 +36,11 @@ public class AdminMainController {
 		}
 	}
 
+	/**
+	 * Returns <code>ModelAndView</code> of the form to either create or list review if the request is sent by an authenticated user.In case the user is not authenticated 404 page is returned.
+	 * @return <code>ModelAndView</code>
+	 * @see ModelAndView
+	 */
 	@RequestMapping(value = "/review", method = RequestMethod.GET)
 	public ModelAndView getReviewPage(ModelMap modelMap) {
 		if (SessionUtil.getCurrentUser().getAuthority().equalsIgnoreCase(StringConstants.AUTHORITY_ROLE_ADMIN)) {
@@ -38,6 +52,11 @@ public class AdminMainController {
 		}
 	}
 
+	/**
+	 * Returns <code>ModelAndView</code> of the form to either create or list Specialty if the request is sent by an authenticated user.In case the user is not authenticated 404 page is returned.
+	 * @return <code>ModelAndView</code>
+	 * @see ModelAndView
+	 */
 	@RequestMapping(value = "/speciality", method = RequestMethod.GET)
 	public ModelAndView getSpecialityPage() {
 		if (SessionUtil.getCurrentUser().getAuthority().equalsIgnoreCase(StringConstants.AUTHORITY_ROLE_ADMIN)) {
@@ -47,6 +66,11 @@ public class AdminMainController {
 		}
 	}
 
+	/**
+	 * Returns <code>ModelAndView</code> of the form to either create or list user if the request is sent by an authenticated user.In case the user is not authenticated 404 page is returned.
+	 * @return <code>ModelAndView</code>
+	 * @see ModelAndView
+	 */
 	@RequestMapping(value = "/user", method = RequestMethod.GET)
 	public ModelAndView getUserPage() {
 		if (SessionUtil.getCurrentUser().getAuthority().equalsIgnoreCase(StringConstants.AUTHORITY_ROLE_ADMIN)) {
@@ -56,6 +80,11 @@ public class AdminMainController {
 	}
 	}
 
+	/**
+	 * Returns <code>ModelAndView</code> of the form to either create or list doctor if the request is sent by an authenticated user.In case the user is not authenticated 404 page is returned.
+	 * @return <code>ModelAndView</code>
+	 * @see ModelAndView
+	 */
 	@RequestMapping(value = "/doctor", method = RequestMethod.GET)
 	public ModelAndView getDoctorPage() {
 		if (SessionUtil.getCurrentUser().getAuthority().equalsIgnoreCase(StringConstants.AUTHORITY_ROLE_ADMIN)) {
@@ -64,7 +93,14 @@ public class AdminMainController {
 		return new ModelAndView("pagenotfound404");
 	}
 	}
+	
+	
 
+	/**
+	 * Returns <code>ModelAndView</code> of the form to either create or list country if the request is sent by an authenticated user.In case the user is not authenticated 404 page is returned.
+	 * @return <code>ModelAndView</code>
+	 * @see ModelAndView
+	 */
 	@RequestMapping(value = "/country", method = RequestMethod.GET)
 	public ModelAndView getCountryPage() {
 		if (SessionUtil.getCurrentUser().getAuthority().equalsIgnoreCase(StringConstants.AUTHORITY_ROLE_ADMIN)) {
@@ -83,6 +119,12 @@ public class AdminMainController {
 	}
 	}
 
+
+	/**
+	 * Returns <code>ModelAndView</code> of the form to either create or list district if the request is sent by an authenticated user.In case the user is not authenticated 404 page is returned.
+	 * @return <code>ModelAndView</code>
+	 * @see ModelAndView
+	 */
 	@RequestMapping(value = "/district", method = RequestMethod.GET)
 	public ModelAndView getDistrictPage() {
 		if (SessionUtil.getCurrentUser().getAuthority().equalsIgnoreCase(StringConstants.AUTHORITY_ROLE_ADMIN)) {
@@ -92,6 +134,12 @@ public class AdminMainController {
 	}
 	}
 
+
+	/**
+	 * Returns <code>ModelAndView</code> of the form to either create or list city if the request is sent by an authenticated user.In case the user is not authenticated 404 page is returned.
+	 * @return <code>ModelAndView</code>
+	 * @see ModelAndView
+	 */
 	@RequestMapping(value = "/city", method = RequestMethod.GET)
 	public ModelAndView getCityPage() {
 		if (SessionUtil.getCurrentUser().getAuthority().equalsIgnoreCase(StringConstants.AUTHORITY_ROLE_ADMIN)) {

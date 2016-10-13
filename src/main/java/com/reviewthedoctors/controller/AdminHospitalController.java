@@ -30,7 +30,7 @@ public class AdminHospitalController {
 	private IHospitalApi hospitalApi;
 	
 	/**
-	 * Persists <code>hospitalDto</code> to database. 
+	 * Sends <code>hospitalDto</code> to API layer. 
 	 * @param hospitalDto the hospital that is to be persisted in the database
 	 * @param redirectAttributes 
 	 * @return
@@ -50,7 +50,7 @@ public class AdminHospitalController {
 	}
 
 	/**
-	 * Retrieves the list of hospitals that are persisted in the database.
+	 * Retrieves the list of hospitals that are saved in the database.
 	 * @param listType
 	 * @return
 	 */
