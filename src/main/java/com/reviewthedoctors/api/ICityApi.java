@@ -5,6 +5,11 @@ import java.util.List;
 import com.reviewthedoctors.model.dto.CityDto;
 import com.reviewthedoctors.model.dto.CountryDto;
 
+/**
+ * 
+ * @author user
+ *
+ */
 public interface ICityApi {
 	CityDto create(CityDto cityDto);
 	CityDto update(CityDto cityDto);

@@ -34,7 +34,7 @@ public class Review {
 	@JoinColumn(name="userId")
 	private User user;
 	
-	@Column
+	@Column(length = 65535,columnDefinition="Text")
 	private String review;
 	
 	@Column
