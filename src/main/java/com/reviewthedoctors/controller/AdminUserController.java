@@ -25,7 +25,7 @@ public class AdminUserController {
 	private IUserApi userApi;
 	
 	@RequestMapping(value="users",method=RequestMethod.POST)
-	public String addCity(@ModelAttribute("user")UserDto user,RedirectAttributes redirectAttributes ){
+	public String addUser(@ModelAttribute("user")UserDto user,RedirectAttributes redirectAttributes ){
 		try{
 			userApi.create(user);
 			redirectAttributes.addFlashAttribute(StringConstants.MSG_SUCCESS,user.getFirstName()+" "+user.getLastName()+" "+StringConstants.MSG_SUCCESS_CONTENT);
@@ -38,7 +38,7 @@ public class AdminUserController {
 
 	@ResponseBody
 	@RequestMapping(value="users",method=RequestMethod.GET)
-	public Map<String,List<UserDto>> getCityList(@RequestHeader("List_Type") String listType){
+	public Map<String,List<UserDto>> getUserList(@RequestHeader("List_Type") String listType){
 		Map<String,List<UserDto>> userListMap = new HashMap<String,List<UserDto>>();
 		if(listType.equalsIgnoreCase(StringConstants.HEAD_PARAM_LIST_TYPE_MULTIPLE)){
 			userListMap.put("userList",userApi.getAllUser());

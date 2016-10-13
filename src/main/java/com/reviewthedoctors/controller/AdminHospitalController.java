@@ -25,7 +25,7 @@ public class AdminHospitalController {
 	private IHospitalApi hospitalApi;
 	
 	@RequestMapping(value="hospitals",method=RequestMethod.POST)
-	public String addCity(@ModelAttribute("hospital")HospitalDto hospitalDto,RedirectAttributes redirectAttributes){
+	public String addHospital(@ModelAttribute("hospital")HospitalDto hospitalDto,RedirectAttributes redirectAttributes){
 		try{
 			hospitalApi.create(hospitalDto);
 			redirectAttributes.addFlashAttribute(StringConstants.MSG_SUCCESS,hospitalDto.getName()+" "+StringConstants.MSG_SUCCESS_CONTENT );

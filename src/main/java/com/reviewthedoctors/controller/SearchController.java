@@ -17,6 +17,7 @@ import com.reviewthedoctors.api.IReviewApi;
 import com.reviewthedoctors.model.dto.DoctorDto;
 import com.reviewthedoctors.model.dto.ReviewDto;
 import com.reviewthedoctors.model.dto.SearchDto;
+import com.reviewthedoctors.util.SessionUtil;
 import com.reviewthedoctors.util.StringConstants;
 
 @Controller
@@ -29,6 +30,14 @@ public class SearchController {
 	@Autowired
 	private IDoctorApi doctorApi;
 	
+	/**
+	 * Searches either reviews or doctors. 
+	 * @param request <code>HttpServletRequest</code>
+	 * @param search it contains information about whether to search doctors or reviews and also contains the search query. 
+	 * @return <code>ModelAndView</code>
+	 * @see ModelAndView
+	 * @see HttpServletRequest
+	 */
 	@RequestMapping(value="searches",method=RequestMethod.POST)
 	public ModelAndView search(HttpServletRequest request,@ModelAttribute("search") SearchDto search){
 		if(search.getSearchMainCriteria().equalsIgnoreCase(StringConstants.SEARCH_MAIN_CRITERIA_DOCTOR)){
@@ -56,6 +65,26 @@ public class SearchController {
 	}
 	
 	
+
+	@RequestMapping(value = "searchresult", method = RequestMethod.GET)
+	public ModelAndView getSearchResultPage() {
+		if (SessionUtil.getCurrentUser().getAuthority().equalsIgnoreCase(StringConstants.AUTHORITY_ROLE_USER)) {
+			return new ModelAndView("module/reviewer/searchresult", StringConstants.PAGE_TITLE,
+					StringConstants.WEB_APP_SEARCH);
+		} else {
+			return new ModelAndView("pagenotfound404");
+		}
+	}
+	
+
+	@RequestMapping(value = "search", method = RequestMethod.GET)
+	public ModelAndView getSearchPage() {
+		if (SessionUtil.getCurrentUser().getAuthority().equalsIgnoreCase(StringConstants.AUTHORITY_ROLE_USER)) {
+			return new ModelAndView("module/reviewer/search", StringConstants.PAGE_TITLE,StringConstants.WEB_APP_SEARCH);
+		} else {
+			return new ModelAndView("pagenotfound404");
+		}
+	}
 	
 	
 }

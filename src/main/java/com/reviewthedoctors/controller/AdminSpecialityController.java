@@ -25,7 +25,7 @@ public class AdminSpecialityController {
 	private ISpecialityApi specialityApi;
 	
 	@RequestMapping(value="specialities",method=RequestMethod.POST)
-	public String addCity(@ModelAttribute("speciality")SpecialityDto specialityDto,RedirectAttributes redirectAttributes){
+	public String addSpeciality(@ModelAttribute("speciality")SpecialityDto specialityDto,RedirectAttributes redirectAttributes){
 		try{
 			specialityApi.create(specialityDto);
 			redirectAttributes.addFlashAttribute(StringConstants.MSG_SUCCESS,specialityDto.getSpecialityName()+" "+StringConstants.MSG_SUCCESS_CONTENT);
@@ -38,7 +38,7 @@ public class AdminSpecialityController {
 
 	@ResponseBody
 	@RequestMapping(value="specialities",method=RequestMethod.GET)
-	public Map<String,List<SpecialityDto>> getCityList(@RequestHeader("List_Type") String listType){
+	public Map<String,List<SpecialityDto>> getSpecialityList(@RequestHeader("List_Type") String listType){
 		Map<String,List<SpecialityDto>> specialityListMap = new HashMap<String,List<SpecialityDto>>();
 		if(listType.equalsIgnoreCase(StringConstants.HEAD_PARAM_LIST_TYPE_MULTIPLE)){
 			specialityListMap.put("specialityList",specialityApi.getAllSpecialities());

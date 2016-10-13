@@ -29,6 +29,12 @@ import com.reviewthedoctors.model.dto.UserDto;
 import com.reviewthedoctors.util.SessionUtil;
 import com.reviewthedoctors.util.StringConstants;
 
+/**
+ * The <code>ReviewerController</code> has methods that are user specific. All the methods in this controller
+ * are invoked by reviewer only. 
+ * @author SmritaPokharel
+ *
+ */
 @Controller
 @RequestMapping("/reviewer")
 public class ReviewerController {
@@ -94,14 +100,6 @@ public class ReviewerController {
 		}
 	}
 
-	@RequestMapping(value = "search", method = RequestMethod.GET)
-	public ModelAndView getSearchPage() {
-		if (SessionUtil.getCurrentUser().getAuthority().equalsIgnoreCase(StringConstants.AUTHORITY_ROLE_USER)) {
-			return new ModelAndView("module/reviewer/search", StringConstants.PAGE_TITLE,StringConstants.WEB_APP_SEARCH);
-		} else {
-			return new ModelAndView("pagenotfound404");
-		}
-	}
 
 	@RequestMapping(value = "individualreview", method = RequestMethod.GET)
 	public ModelAndView getIndividualReviewPage(HttpServletRequest request) {
@@ -117,15 +115,6 @@ public class ReviewerController {
 		}
 	}
 
-	@RequestMapping(value = "searchresult", method = RequestMethod.GET)
-	public ModelAndView getSearchResultPage() {
-		if (SessionUtil.getCurrentUser().getAuthority().equalsIgnoreCase(StringConstants.AUTHORITY_ROLE_USER)) {
-			return new ModelAndView("module/reviewer/searchresult", StringConstants.PAGE_TITLE,
-					StringConstants.WEB_APP_SEARCH);
-		} else {
-			return new ModelAndView("pagenotfound404");
-		}
-	}
 
 	@RequestMapping(value = "individualdoctor", method = RequestMethod.GET)
 	public ModelAndView getIndividualDoctorPage(HttpServletRequest request) {

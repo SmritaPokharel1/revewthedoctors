@@ -42,7 +42,7 @@ public class AdminDoctorController {
 
 	@ResponseBody
 	@RequestMapping(value="doctors",method=RequestMethod.GET)
-	public Map<String,List<DoctorDto>> getCityList(@RequestHeader("List_Type") String listType,HttpServletRequest request){
+	public Map<String,List<DoctorDto>> getDoctorList(@RequestHeader("List_Type") String listType,HttpServletRequest request){
 		Map<String,List<DoctorDto>> doctorListMap = new HashMap<String,List<DoctorDto>>();
 		if(listType.equalsIgnoreCase(StringConstants.HEAD_PARAM_LIST_TYPE_MULTIPLE)){
 			doctorListMap.put("doctorList",doctorApi.getAllDoctors());
