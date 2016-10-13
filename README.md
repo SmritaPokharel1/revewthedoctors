@@ -13,7 +13,7 @@ Review the doctors is an application that helps people find good doctors. Not ju
 
 5.Deploy the revewthedoctors.war war file which is located at projectroot_folder/build/libs/ to tomcat.
 
-6.Browse http:\\localhost:8080\revewthedoctors\home
+6.Browse http:\\\\localhost:8080\revewthedoctors\home
 
 7.Login as user using the following credentials
 #####UserName :srijapokharel@gmail.com
