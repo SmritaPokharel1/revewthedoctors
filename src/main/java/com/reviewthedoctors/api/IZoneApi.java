@@ -9,7 +9,7 @@ public interface IZoneApi {
 	ZoneDto create(ZoneDto zoneDto);
 	ZoneDto update(ZoneDto zoneDto);
 	boolean delete(long zoneId);
-	ZoneDto getDoctor(long zoneId);
+	ZoneDto getZone(long zoneId);
 	List<ZoneDto> getAllZoneList();
 	ZoneDto getZoneByName(String zoneName);
 	

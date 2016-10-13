@@ -23,11 +23,6 @@ public class UserApi implements IUserApi{
 	@Autowired
 	private CityRepository cityRepository;
 	
-	/*public UserApi(UserRepository userRepository,CityRepository cityRepository){
-		this.userRepository=userRepository;
-		this.cityRepository=cityRepository;
-	}*/
-
 	public UserDto create(UserDto userDto) {
 		User user = ConvertUtil.convertDtoToUser(userDto);
 		City city = cityRepository.getCityByName(userDto.getCityName());
@@ -45,17 +40,14 @@ public class UserApi implements IUserApi{
 	}
 
 	public UserDto update(UserDto userDto) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	public boolean delete(long userId) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
-	public UserDto getDoctor(long userId) {
-		// TODO Auto-generated method stub
+	public UserDto getUser(long userId) {
 		return null;
 	}
 	

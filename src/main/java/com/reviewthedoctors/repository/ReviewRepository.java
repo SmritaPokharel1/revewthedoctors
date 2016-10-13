@@ -9,8 +9,6 @@ import com.reviewthedoctors.model.entity.Review;
 
 public interface ReviewRepository extends CrudRepository<Review, Long> {
 	
-	////@Query("Select r from Review r  where  r.review like CONCAT('%',?1,'%')")
-	// r.doctor.firstName like CONCAT('%',?1,'%') OR r.doctor.middleName like CONCAT('%',?1,'%') OR r.doctor.lastName like CONCAT('%',?1,'%')
 	@Query("Select r from Review r join r.doctor.specialityList s where  r.review like CONCAT('%',?1,'%') OR r.doctor.firstName like CONCAT('%',?1,'%') OR r.doctor.middleName like CONCAT('%',?1,'%') OR r.doctor.lastName like CONCAT('%',?1,'%') OR s.specialityName like CONCAT('%',?1,'%')")
 	List<Review> searchReview(String searchQuery);
 	

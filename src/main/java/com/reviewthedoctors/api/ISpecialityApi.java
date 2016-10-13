@@ -9,7 +9,7 @@ public interface ISpecialityApi{
 	SpecialityDto create(SpecialityDto specialityDto);
 	SpecialityDto update(SpecialityDto specialityDto);
 	boolean delete(long specialityId);
-	SpecialityDto getDoctor(long specialityId);
+	SpecialityDto getSpeciality(long specialityId);
 	List<SpecialityDto> getAllSpecialities();
 	SpecialityDto getSpecialityByName(String name);
 	

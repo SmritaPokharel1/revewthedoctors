@@ -1,13 +1,10 @@
 package com.reviewthedoctors.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-
-import com.reviewthedoctors.api.impl.CountryApi;
 import com.reviewthedoctors.util.SessionUtil;
 import com.reviewthedoctors.util.StringConstants;
 
@@ -15,8 +12,6 @@ import com.reviewthedoctors.util.StringConstants;
 @RequestMapping(value = "admin")
 public class AdminMainController {
 
-	@Autowired
-	private CountryApi countryApi;
 
 	@RequestMapping(value = "/document", method = RequestMethod.GET)
 	public ModelAndView getDocumentPage() {

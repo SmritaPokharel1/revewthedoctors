@@ -4,9 +4,9 @@ import com.reviewthedoctors.model.dto.BaseDto;
 
 public interface IBaseApi {
 
-	public BaseDto create(BaseDto baseDto);
-	public BaseDto update(BaseDto baseDto);
-	public boolean delete(BaseDto baseDto);
-	public BaseDto getDoctor(long id);
+	BaseDto create(BaseDto baseDto);
+	BaseDto update(BaseDto baseDto);
+	boolean delete(BaseDto baseDto);
+	BaseDto getEntity(long id);
 	
 }

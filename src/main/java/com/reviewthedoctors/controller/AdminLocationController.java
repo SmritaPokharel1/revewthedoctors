@@ -43,10 +43,7 @@ public class AdminLocationController {
 	@Autowired
 	private ICityApi cityApi;
 	
-/*	public AdminLocationController(IZoneApi zoneApi){
-		this.zoneApi=zoneApi;
-	}
-	*/
+
 	@RequestMapping(value="countries",method=RequestMethod.POST)
 	public String addCountry(@ModelAttribute("country") CountryDto country,RedirectAttributes redirectAttributes){
 		
@@ -57,7 +54,6 @@ public class AdminLocationController {
 			expection.printStackTrace();
 			redirectAttributes.addFlashAttribute("errorMessage", country.getName()+" couldnot be saved.");
 		}
-		//return new ModelAndView("module/country/country",StringConstants.PAGE_TITLE,"Country");
 		return "redirect:country";
 	}
 	
@@ -74,7 +70,6 @@ public class AdminLocationController {
 	@ResponseBody
 	@RequestMapping(value="countries", method=RequestMethod.DELETE)
 	public String deleteCountry(@RequestBody Long countryId){
-		//Long countryId = Long.parseLong(request.getParameter("countryId"));
 		boolean operation = countryApi.delete(countryId);
 		if(operation){
 			return "Record has successfully been deleted";

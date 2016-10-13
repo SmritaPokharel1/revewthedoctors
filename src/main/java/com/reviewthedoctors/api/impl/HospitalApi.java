@@ -22,11 +22,7 @@ public class HospitalApi implements IHospitalApi{
 	
 	@Autowired
 	private CityRepository cityRepository;
-	
-/*	public HospitalApi(HospitalRepository hospitalRepository,CityRepository cityRepository){
-		this.hospitalRepository=hospitalRepository;
-		this.cityRepository=cityRepository;
-	}*/
+
 
 	public HospitalDto create(HospitalDto hospitalDto) {
 		Hospital hospital = ConvertUtil.convertDtoToHospital(hospitalDto);
@@ -45,7 +41,7 @@ public class HospitalApi implements IHospitalApi{
 		return false;
 	}
 
-	public HospitalDto getDoctor(long hospitalId) {
+	public HospitalDto getHospital(long hospitalId) {
 		// TODO Auto-generated method stub
 		return null;
 	}

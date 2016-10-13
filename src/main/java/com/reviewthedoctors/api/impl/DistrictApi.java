@@ -23,11 +23,6 @@ public class DistrictApi implements IDistrictApi{
 	@Autowired
 	private ZoneRepository zoneRepository;
 	
-/*	public DistrictApi(DistrictRepository districtRepository,ZoneRepository zoneRepository){
-		this.districtRepository=districtRepository;
-		this.zoneRepository=zoneRepository;
-	}*/
-
 	@Override
 	public DistrictDto create(DistrictDto districtDto) {
 		Zone zone = zoneRepository.getZoneByName(districtDto.getZone());

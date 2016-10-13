@@ -18,10 +18,6 @@ public class CountryApi implements ICountryApi {
 	@Autowired
 	private CountryRepository countryRepository;
 
-	/*public CountryApi(CountryRepository countryRepository) {
-		this.countryRepository = countryRepository;
-	}
-*/
 	@Override
 	public CountryDto create(CountryDto countryDto) {
 		Country country = countryRepository.save(ConvertUtil.convertDtoToCountry(countryDto));

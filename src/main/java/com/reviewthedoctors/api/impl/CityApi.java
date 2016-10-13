@@ -23,11 +23,6 @@ public class CityApi implements ICityApi{
 	
 	@Autowired
 	private DistrictRepository districtRepository;
-	
-/*	public CityApi(CityRepository  cityRepository,DistrictRepository districtRepository){
-		this.cityRepository=cityRepository;
-		this.districtRepository=districtRepository;
-	}*/
 
 	@Override
 	public CityDto create(CityDto cityDto) {

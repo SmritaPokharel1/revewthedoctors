@@ -4,5 +4,5 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
        
-    	<bean id="userCreator" class="com.reviewthedoctors.initialization.Initializor" init-method="init"/>
+    	<bean id="initializor" class="com.reviewthedoctors.initialization.Initializor" init-method="init"/>
 </beans>    	

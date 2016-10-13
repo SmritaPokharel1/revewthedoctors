@@ -18,10 +18,6 @@ public class SpecialityApi implements ISpecialityApi {
 	@Autowired
 	private SpecialityRepository specialityRepository;
 	
-	/*public SpecialityApi(SpecialityRepository specialityRepository){
-		this.specialityRepository=specialityRepository;
-	}
-*/
 	public SpecialityDto create(SpecialityDto specialityDto) {
 		Speciality speciality = ConvertUtil.convertDtoToSpeciality(specialityDto);
 		return ConvertUtil.convertSpecialityToDto(specialityRepository.save(speciality));
@@ -29,7 +25,6 @@ public class SpecialityApi implements ISpecialityApi {
 	}
 
 	public SpecialityDto update(SpecialityDto specialityDto) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -38,7 +33,7 @@ public class SpecialityApi implements ISpecialityApi {
 		return false;
 	}
 
-	public SpecialityDto getDoctor(long specialityId) {
+	public SpecialityDto getSpeciality(long specialityId) {
 		// TODO Auto-generated method stub
 		return null;
 	}

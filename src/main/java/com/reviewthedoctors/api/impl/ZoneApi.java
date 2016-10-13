@@ -23,11 +23,6 @@ public class ZoneApi implements IZoneApi{
 	
 	@Autowired
 	private CountryRepository countryRepository;
-	
-	/*public ZoneApi(ZoneRepository zoneRepository,CountryRepository countryRepository){
-		this.zoneRepository=zoneRepository;
-		this.countryRepository=countryRepository;
-	}*/
 
 	@Override
 	public ZoneDto create(ZoneDto zoneDto) {
@@ -47,7 +42,7 @@ public class ZoneApi implements IZoneApi{
 	}
 
 	@Override
-	public ZoneDto getDoctor(long zoneId) {
+	public ZoneDto getZone(long zoneId) {
 		return null;
 	}
 	

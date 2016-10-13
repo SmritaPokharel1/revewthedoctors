@@ -33,7 +33,6 @@ public class AdminSpecialityController {
 			expection.printStackTrace();
 			redirectAttributes.addFlashAttribute(StringConstants.MSG_ERROR,specialityDto.getSpecialityName()+" "+StringConstants.MSG_ERROR_CONTENT);
 		}
-		//return new ModelAndView("module/country/country",StringConstants.PAGE_TITLE,"Country");
 		return "redirect:speciality";
 	}
 

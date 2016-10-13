@@ -9,7 +9,7 @@ public interface IHospitalApi{
 	HospitalDto create(HospitalDto hospitalDto);
 	HospitalDto update(HospitalDto hospitalDto);
 	boolean delete(long hospitalId);
-	HospitalDto getDoctor(long hospitalId);
+	HospitalDto getHospital(long hospitalId);
 	List<HospitalDto> getAllHospitals();
 	HospitalDto getHospitalByName(String name);
 }

@@ -29,12 +29,6 @@ public class ReviewApi implements IReviewApi {
 	@Autowired
 	private UserRepository userRepository;
 	
-	/*public ReviewApi(ReviewRepository reviewRepository,DoctorRepository doctorRepository,UserRepository userRepository){
-		this.reviewRepository=reviewRepository;
-		this.doctorRepository=doctorRepository;
-		this.userRepository=userRepository;
-	}
-	*/
 	public ReviewDto create(ReviewDto reviewDto) {
 		Doctor doctor = doctorRepository.findOne(reviewDto.getDoctorId());
 		User user ; 

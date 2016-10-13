@@ -14,6 +14,6 @@ public interface IDocumentApi {
 	public DocumentDto create(DocumentDto documentDto);
 	public DocumentDto update(DocumentDto documentDto);
 	public boolean delete(long documentId);
-	public DocumentDto getDoctor(long documentId);
+	public DocumentDto getDocument(long documentId);
 	
 }

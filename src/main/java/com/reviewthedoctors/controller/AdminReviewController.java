@@ -19,10 +19,8 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.reviewthedoctors.api.IReviewApi;
-import com.reviewthedoctors.model.dto.DoctorDto;
 import com.reviewthedoctors.model.dto.ReviewDto;
 import com.reviewthedoctors.model.dto.UserDto;
-import com.reviewthedoctors.model.entity.Review;
 import com.reviewthedoctors.util.SessionUtil;
 import com.reviewthedoctors.util.StringConstants;
 

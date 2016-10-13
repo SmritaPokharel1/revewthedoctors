@@ -18,11 +18,6 @@ public class DocumentApi implements IDocumentApi {
 	@Autowired
 	private DocumentRepository documentRepository;
 	
-	/*//TODO WRITE JAVA DOCS
-	public DocumentApi(DocumentRepository documentRepository){
-		this.documentRepository = documentRepository;
-	}*/
-	
 	//TODO WRITE JAVA DOCS
 	public DocumentDto create(DocumentDto documentDto) {
 		return null;
@@ -38,7 +33,7 @@ public class DocumentApi implements IDocumentApi {
 		return false;
 	}
 
-	public DocumentDto getDoctor(long documentId) {
+	public DocumentDto getDocument(long documentId) {
 		// TODO Auto-generated method stub
 		return null;
 	}

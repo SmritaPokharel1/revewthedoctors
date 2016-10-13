@@ -40,13 +40,6 @@ public class DoctorApi implements IDoctorApi{
 	@Autowired
 	private HospitalRepository hospitalRepository;
 	
-	/*public DoctorApi(DoctorRepository doctorRepository,CityRepository cityRepository, SpecialityRepository specialityRepository,HospitalRepository hospitalRepository){
-		this.doctorRepository=doctorRepository;
-		this.cityRepository=cityRepository;
-		this.specialityRepository=specialityRepository;
-		this.hospitalRepository=hospitalRepository;
-	}*/
-	
 	public DoctorDto create(DoctorDto doctorDto) {
 		List<Hospital> hospitalList = hospitalRepository.getHospitalListByNameArray(doctorDto.getHospitalNameArray());
 		City city = cityRepository.getCityByName(doctorDto.getCityName());
