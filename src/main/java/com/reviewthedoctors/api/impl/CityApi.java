@@ -15,6 +15,11 @@ import com.reviewthedoctors.repository.CityRepository;
 import com.reviewthedoctors.repository.DistrictRepository;
 import com.reviewthedoctors.util.ConvertUtil;
 
+/**
+ * The class <code>CityApi</code> has methods to create, retrieve, update and delete either a city or cities.
+ * @author SmritaPokharel
+ *
+ */
 @Service
 public class CityApi implements ICityApi{
 	
@@ -24,6 +29,10 @@ public class CityApi implements ICityApi{
 	@Autowired
 	private DistrictRepository districtRepository;
 
+	/**
+	 * Saves city entity to the database.
+	 * @Param cityDto : the city entity that is to be persisted to the database.
+	 */
 	@Override
 	public CityDto create(CityDto cityDto) {
 		District district = districtRepository.getDistrictByName(cityDto.getDistrict());
@@ -34,6 +43,7 @@ public class CityApi implements ICityApi{
 		return ConvertUtil.convertCityToDto(cityRepository.save(city));
 	}
 
+	
 	@Override
 	public CityDto update(CityDto cityDto) {
 		return null;
@@ -49,6 +59,10 @@ public class CityApi implements ICityApi{
 		return null;
 	}
 	
+	/**
+	 * Retrieves all cities and returns a list of <code>CityDto</code>
+	 * @return cityDtoList :a list of cities that are in the database
+	 */
 	@Override
 	public List<CityDto> getAllCityList() {
 		Iterable<City> cityIterable = cityRepository.findAll();
@@ -59,6 +73,10 @@ public class CityApi implements ICityApi{
 		return cityDtoList;
 		}
 	
+	/**
+	 * Retrieves a city by its name and returns a CityDto
+	 * @return cityDto retrieved from the city name. 
+	 */
 	@Override
 	public CityDto getCityByName(String name){
 		return ConvertUtil.convertCityToDto(cityRepository.getCityByName(name));

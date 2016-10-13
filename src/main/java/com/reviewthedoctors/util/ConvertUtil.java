@@ -46,7 +46,12 @@ import com.reviewthedoctors.model.entity.Zone;
  */
 public class ConvertUtil {
 
-	// TODO WRITE JAVA DOCS
+	
+	/**
+	 * Converts Document to DocumentDto. 
+	 * @param document
+	 * @return
+	 */
 	public static DocumentDto convertDocumentToDto(Document document) {
 		DocumentDto documentDto = new DocumentDto();
 		if (document != null) {
@@ -61,7 +66,11 @@ public class ConvertUtil {
 
 	}
 
-	// TODO WRITE JAVA DOCS
+	/**
+	 * Converts DocumentDto to Document
+	 * @param documentDto
+	 * @return
+	 */
 	public static Document convertDtoToDocument(DocumentDto documentDto) {
 		Document document = new Document();
 
@@ -72,6 +81,11 @@ public class ConvertUtil {
 		return document;
 	}
 
+	/**
+	 * Converts doctor to DoctorDto
+	 * @param doctor
+	 * @return
+	 */
 	public static DoctorDto convertDoctorToDto(Doctor doctor) {
 		if (doctor != null) {
 			DoctorDto doctorDto = new DoctorDto();
@@ -97,8 +111,13 @@ public class ConvertUtil {
 		}
 	}
 
+	/**
+	 * Converts <code>Doctor</code> to <code>DoctorDto</code>
+	 * @param doctor
+	 * @param isReviewListOn
+	 * @return
+	 */
 	@Transactional
-
 	public static DoctorDto convertDoctorToDto(Doctor doctor, boolean isReviewListOn) {
 		if (doctor != null) {
 			DoctorDto doctorDto = new DoctorDto();
@@ -132,6 +151,11 @@ public class ConvertUtil {
 		}
 	}
 
+	/**
+	 * Converts <code>DoctorDto</code> to Doctor.
+	 * @param doctorDto
+	 * @return
+	 */
 	public static Doctor convertDtoToDoctor(DoctorDto doctorDto) {
 		if (doctorDto != null) {
 			Doctor doctor = new Doctor();
@@ -146,6 +170,11 @@ public class ConvertUtil {
 		}
 	}
 
+	/**
+	 * Converts <code>User</code> to <code>UserDto</code>
+	 * @param user
+	 * @return
+	 */
 	public static UserDto convertUserToDto(User user) {
 
 		if (user != null) {
@@ -176,6 +205,11 @@ public class ConvertUtil {
 		return userDtoList;
 	}
 
+	/**
+	 * Converts <code>UserDto</code> to <code>User</code>
+	 * @param userDto
+	 * @return
+	 */
 	public static User convertDtoToUser(UserDto userDto) {
 
 		if (userDto != null) {
@@ -200,6 +234,11 @@ public class ConvertUtil {
 		}
 	}
 
+	/**
+	 * Converts <code>Review</code> to <code>ReviewDto</code>
+	 * @param review
+	 * @return
+	 */
 	public static ReviewDto convertReviewToDto(Review review) {
 
 		if (review != null) {
@@ -218,6 +257,12 @@ public class ConvertUtil {
 		}
 	}
 
+	/**
+	 * Converts <code>Review</code> to <code>ReviewDto</code>
+	 * @param review
+	 * @param length
+	 * @return
+	 */
 	public static ReviewDto convertSearchedReviewToDto(Review review, int length) {
 		if (review != null) {
 			ReviewDto reviewDto = new ReviewDto();

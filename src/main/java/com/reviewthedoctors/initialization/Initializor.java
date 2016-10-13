@@ -21,6 +21,22 @@ import com.reviewthedoctors.model.dto.UserDto;
 import com.reviewthedoctors.model.dto.ZoneDto;
 import com.reviewthedoctors.util.StringConstants;
 
+/**
+ * The class <code>Initializor</code> populates startup data in the database.
+ * Following are the tables where data is populated when the application starts:
+ * <ol>
+ * 		<li>Country</li>
+ * 	    <li>Zone</li>
+ *      <li>District</li>
+ *      <li>City</li>
+ *      <li>User</li>
+ *      <li>Doctor</li>
+ *      <li>Specialty</li>
+ *      <li>Review</li>
+ * </ol>
+ * @author SmritaPokharel
+ *
+ */
 public class Initializor {
 	
 	@Autowired
@@ -60,6 +76,23 @@ public class Initializor {
 		return userDto;
 	}
 	
+	/**
+	 * Creates an admin and a user
+	 * One user and one admin is added.
+	 * <pre>
+	 * Admin with following detail is added.
+	 * Name: admin admin admin
+	 * Email:'admin@gmail.com'
+	 * Password 'test'
+	 * authority ADMIN_ROLE
+	 * 
+	 * User with following detail is added.
+	 * Name: Srija Pokharel
+	 * Email:'srijapokharel@gmail.com'
+	 * Password 'test'
+	 * authority User_ROLE
+	 * </pre>
+	 */
 	public void createUsers(){
 		
 		UserDto adminInDb = userApi.getUserByEmail(StringConstants.INIT_ADMIN_EMAIL);
@@ -82,7 +115,9 @@ public class Initializor {
 		return countryDto;
 		
 	}
-	
+	/**
+	 * Creates a country named Nepal.
+	 */
 	public void createCountry(){
 		CountryDto countryInDb = countryApi.getCountryByName(StringConstants.INIT_COUNTRY_NAME);
 		if(countryInDb==null){
@@ -101,6 +136,13 @@ public class Initializor {
 		
 	}
 	
+	/**
+	 * Creates a Zone and saves it in the database.Zone with following detail is created
+	 * <pre>
+	 *     name: Bagmati
+	 *     country:Nepal
+	 * </pre>
+	 */
 	public void createZone(){
 		ZoneDto zoneInDb = zoneApi.getZoneByName(StringConstants.INIT_ZONE_NAME);
 		if(zoneInDb==null){
@@ -119,6 +161,13 @@ public class Initializor {
 		
 	}
 	
+	/**
+	 * Creates a district and saves it in the database. District with the following detail is created:
+	 * <pre>
+	 * 	name:Kathmandu
+	 *  Zone:Bagmati
+	 * </pre>
+	 */
 	public void createDistrict(){
 		DistrictDto districtInDb = districtApi.getDistrictByName(StringConstants.INIT_DISTRICT_NAME);
 		if(districtInDb == null){
@@ -136,6 +185,13 @@ public class Initializor {
 		return cityDto;
 	}
 	
+	/**
+	 * Creates a city and saves it in the database. City with the following detail is created:
+	 * <pre>
+	 * 	name:Kathmandu
+	 *  District:Kathmandu
+	 * </pre>
+	 */
 	public void createCity(){
 		CityDto cityInDb = cityApi.getCityByName(StringConstants.INIT_CITY_NAME);
 		if(cityInDb ==null){
@@ -156,7 +212,17 @@ public class Initializor {
 		
 		return doctorDto;
 	}
-	
+	/**
+	 * Creates a doctor and saves it in the database. Doctor with the following detail is created:
+	 * <pre>
+	 *  FirstName:Arjun
+	 *  MiddleName:Kumar
+	 *  LastName:Karki
+	 *  SpecialtyName:Pulmonologist
+	 *  Hospital:Grande International Hospital
+	 *  Zone:Bagmati
+	 * </pre>
+	 */
 	public void createDoctor(){
 		DoctorDto doctorInDb = doctorApi.getDoctorByName(StringConstants.INIT_DOCTOR_FIRSTNAME, StringConstants.INIT_DOCTOR_LASTNAME);
 		String[] specialityNameArray= new String[1];
