@@ -17,6 +17,11 @@ import com.reviewthedoctors.api.IHospitalApi;
 import com.reviewthedoctors.model.dto.HospitalDto;
 import com.reviewthedoctors.util.StringConstants;
 
+/**
+ * The class <code>AdminHospitalController</code> is a <code>SpringController</code> that has methods to add and list hospitals
+ * @author SmritaPokharel
+ *
+ */
 @Controller
 @RequestMapping("/admin")
 public class AdminHospitalController {
@@ -24,6 +29,14 @@ public class AdminHospitalController {
 	@Autowired
 	private IHospitalApi hospitalApi;
 	
+	/**
+	 * Persists <code>hospitalDto</code> to database. 
+	 * @param hospitalDto the hospital that is to be persisted in the database
+	 * @param redirectAttributes 
+	 * @return
+	 * @see RedirectAttributes
+	 * @see ModelAttribute
+	 */
 	@RequestMapping(value="hospitals",method=RequestMethod.POST)
 	public String addHospital(@ModelAttribute("hospital")HospitalDto hospitalDto,RedirectAttributes redirectAttributes){
 		try{
@@ -36,6 +49,11 @@ public class AdminHospitalController {
 		return "redirect:hospital";
 	}
 
+	/**
+	 * Retrieves the list of hospitals that are persisted in the database.
+	 * @param listType
+	 * @return
+	 */
 	@ResponseBody
 	@RequestMapping(value="hospitals",method=RequestMethod.GET)
 	public Map<String,List<HospitalDto>> getHospitalList(@RequestHeader("List_Type") String listType){

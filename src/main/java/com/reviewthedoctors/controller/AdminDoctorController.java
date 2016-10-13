@@ -21,6 +21,13 @@ import com.reviewthedoctors.api.IDoctorApi;
 import com.reviewthedoctors.model.dto.DoctorDto;
 import com.reviewthedoctors.util.StringConstants;
 
+/**
+ * The <code>AdminDoctorController</code> has methods to add and list doctors.
+ * The methods in this controller can only be accessed by users having ROLE_ADMIN authority.
+ * 
+ * @author SmritaPokharel
+ *
+ */
 @Controller
 @RequestMapping(value="/admin")
 public class AdminDoctorController {
@@ -28,6 +35,14 @@ public class AdminDoctorController {
 	@Autowired
 	private IDoctorApi doctorApi;
 	
+	/**
+	 * Persists doctorDto sent from presentation layer to database.It adds update message to redirect attributes.
+	 * 
+	 * @param doctor the entity to be persisted in the database
+	 * @param redirectAttributes
+	 * @return
+	 * @see RedirectAttributes
+	 */
 	@RequestMapping(value="doctors",method=RequestMethod.POST)
 	public String addDoctor(@ModelAttribute("doctor")DoctorDto doctor,RedirectAttributes redirectAttributes ){
 		try{
@@ -40,6 +55,16 @@ public class AdminDoctorController {
 		return "redirect:doctor";
 	}
 
+	/**
+	 * Returns either one doctor or a list of doctors. The entire behaviour is determined by listType parameter.
+	 * 
+	 * @param listType
+	 * @param redirectAttributes
+	 * @return
+	 * @see RedirectAttributes
+	 * @see StringConstants
+	 * @see ListType
+	 */
 	@ResponseBody
 	@RequestMapping(value="doctors",method=RequestMethod.GET)
 	public Map<String,List<DoctorDto>> getDoctorList(@RequestHeader("List_Type") String listType,HttpServletRequest request){
@@ -57,6 +82,12 @@ public class AdminDoctorController {
 		return doctorListMap;
 	}
 	
+	/**
+	 * Returns details of an individual doctor based on the <code>doctorId</code> as sent in the request
+	 * @param request
+	 * @return
+	 * @see HttpServletRequest
+	 */
 	@RequestMapping(value="individualdoctor",method=RequestMethod.GET)
 	public ModelAndView getIndividualDoctorPage(HttpServletRequest request){
 		String doctorId = request.getParameter("doctorId");
