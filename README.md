@@ -16,12 +16,12 @@ Review the doctors is an application that helps people find good doctors. Not ju
 6. Browse http:\\\\localhost:8080\revewthedoctors\home
 
 7. Login as user using the following credentials
-##### UserName :srijapokharel@gmail.com
-##### Password :test
+    ##### UserName :srijapokharel@gmail.com
+    ##### Password :test
 
 8. Login as admin using the following credentials
-##### UserName :admin@gmail.com
-##### Password :test
+    ##### UserName :admin@gmail.com
+    ##### Password :test
 
 # Application startup
 The class com.reviewthedoctors.initialization.Initializor.java is used to populate values in database. 
