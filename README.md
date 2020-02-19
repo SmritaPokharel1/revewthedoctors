@@ -45,29 +45,29 @@ Speciality name Pulmonologist with chest as speciality category is added.
 ## Hospital table
 Hospital named 'Grande International Hospital' is added.
 
-## User
+### User
 One user and one admin is added.
-### Admin:
-#### Name: admin admin admin 
-#### Email:'admin@gmail.com'
-#### Password 'test' 
-#### authority ADMIN_ROLE
+#### Admin:
+##### Name: admin admin admin 
+##### Email:'admin@gmail.com'
+##### Password 'test' 
+##### authority ADMIN_ROLE
 
 ### User
-#### Name: Srija Pokhrel
-#### Email:'srijapokharel@gmail.com'
-#### Password 'test' 
-#### authority User_ROLE 
+##### Name: Srija Pokhrel
+##### Email:'srijapokharel@gmail.com'
+##### Password 'test' 
+##### authority User_ROLE 
 
 ## Doctor Table
 A Doctor with following details is added.
 
-#### FirstName: Arjun
-#### MiddleName: Kumar
-#### LastName: Karki
-#### SpecialityName:Pulmonologist
-#### Hospital:Grande International Hospital.
+##### FirstName: Arjun
+##### MiddleName: Kumar
+##### LastName: Karki
+##### SpecialityName:Pulmonologist
+##### Hospital:Grande International Hospital.
 
 # User Manual
 
-####https://medium.com/@Smrita/web-application-walk-through-of-review-the-doctors-a2a4966fed09#.ws0wfj1uc
+##### https://medium.com/@Smrita/web-application-walk-through-of-review-the-doctors-a2a4966fed09#.ws0wfj1uc
