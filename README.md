@@ -16,58 +16,56 @@ Review the doctors is an application that helps people find good doctors. Not ju
 6. Browse http:\\\\localhost:8080\revewthedoctors\home
 
 7. Login as user using the following credentials
-    ##### UserName :srijapokharel@gmail.com
-    ##### Password :test
+       ##### UserName :srijapokharel@gmail.com
+       ##### Password :test
 
 8. Login as admin using the following credentials
-    ##### UserName :admin@gmail.com
-    ##### Password :test
+       ##### UserName :admin@gmail.com
+       ##### Password :test
 
 # Application startup
-The class com.reviewthedoctors.initialization.Initializor.java is used to populate values in database. 
-Following are the data that get populated in the database when the application starts:
+    The class com.reviewthedoctors.initialization.Initializor.java is used to populate values in database. 
+    Following are the data that get populated in the database when the application starts:
 
 ## Country table
-A country named Nepal is added.
+    A country named Nepal is added.
 
 ## Zone table
-A Zone named Bagmati is added.
+    A Zone named Bagmati is added.
 
 ## District table
-A District named Kathmandu is added.
+    A District named Kathmandu is added.
 
 ## City table
-A city named Kathmandu is added.
+    A city named Kathmandu is added.
 
 ## Speciality table
-Speciality name Pulmonologist with chest as speciality category is added.
+    Speciality name Pulmonologist with chest as speciality category is added.
 
 ## Hospital table
-Hospital named 'Grande International Hospital' is added.
+    Hospital named 'Grande International Hospital' is added.
+
+### Admin
+    ##### Name: admin admin admin 
+    ##### Email:'admin@gmail.com'
+    ##### Password 'test' 
+    ##### authority ADMIN_ROLE
 
 ### User
-One user and one admin is added.
-#### Admin:
-##### Name: admin admin admin 
-##### Email:'admin@gmail.com'
-##### Password 'test' 
-##### authority ADMIN_ROLE
-
-### User
-##### Name: Srija Pokhrel
-##### Email:'srijapokharel@gmail.com'
-##### Password 'test' 
-##### authority User_ROLE 
+    ##### Name: Srija Pokhrel
+    ##### Email:'srijapokharel@gmail.com'
+    ##### Password 'test' 
+    ##### authority User_ROLE 
 
 ## Doctor Table
-A Doctor with following details is added.
+    A Doctor with following details is added.
 
-##### FirstName: Arjun
-##### MiddleName: Kumar
-##### LastName: Karki
-##### SpecialityName:Pulmonologist
-##### Hospital:Grande International Hospital.
+    ##### FirstName: Arjun
+    ##### MiddleName: Kumar
+    ##### LastName: Karki
+    ##### SpecialityName:Pulmonologist
+    ##### Hospital:Grande International Hospital.
 
 # User Manual
 
-##### https://medium.com/@Smrita/web-application-walk-through-of-review-the-doctors-a2a4966fed09#.ws0wfj1uc
+    ##### https://medium.com/@Smrita/web-application-walk-through-of-review-the-doctors-a2a4966fed09#.ws0wfj1uc
