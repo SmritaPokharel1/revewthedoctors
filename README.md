@@ -3,23 +3,23 @@ Review the doctors is an application that helps people find good doctors. Not ju
 
 # Application Setup  for tomcat
 
-1.Clone reviewthedoctors
+1. Clone reviewthedoctors
 
-2.Run gradlew clean from the terminal
+2. Run gradlew clean from the terminal
 
-3.Run gradlew build from the terminal
+3. Run gradlew build from the terminal
 
-4.Create a database named revewthedoctors in mysql.
+4. Create a database named revewthedoctors in mysql.
 
-5.Deploy the revewthedoctors.war war file which is located at projectroot_folder/build/libs/ to tomcat.
+5. Deploy the revewthedoctors.war war file which is located at projectroot_folder/build/libs/ to tomcat.
 
-6.Browse http:\\\\localhost:8080\revewthedoctors\home
+6. Browse http:\\\\localhost:8080\revewthedoctors\home
 
-7.Login as user using the following credentials
+7. Login as user using the following credentials
 ##### UserName :srijapokharel@gmail.com
 ##### Password :test
 
-8.Login as admin using the following credentials
+8. Login as admin using the following credentials
 ##### UserName :admin@gmail.com
 ##### Password :test
 
